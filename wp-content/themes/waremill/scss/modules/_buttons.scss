@@ -1,0 +1,60 @@
+.button, .button--big, button{
+	background: $brand--color1;
+	font-size: 1.4rem;
+	color: white;
+	display: inline-block;
+	padding: 0 20px;
+	text-align: center;
+	font-weight: 700;
+	@include transition(all, 0.3s);
+	text-transform: none;
+	@include round(3px);
+	line-height: 40px;
+	letter-spacing: normal;
+	margin-top: 0;
+	i {
+	font-size: 1.3rem;
+	margin-left: 15px;	
+	}
+	&:hover{
+		color: white;
+		background: darken($brand--color1, 10%);
+		text-decoration: none;
+		
+	}
+	&.facebook {
+		background: #3b5998;
+		i {
+			float: none !important;
+			margin-right: 0;
+			margin-right: 15px;
+		}
+	}
+	&.google {
+		background: #dd4b39;
+		i {
+			float: none !important;
+			margin-right: 0;
+			margin-right: 15px;
+		}
+	}
+	&.grey {
+		background: #666666;
+		color: #fff !important;
+	}
+	&.green {
+		background: $green-color;
+	}
+	&.small {
+		height: 30px;
+		line-height: 30px;
+		padding: 0 15px;
+		font-size: 1.4rem;
+		i {
+			margin-left: 10px;
+		}
+	}
+}
+.button--big{
+	font-size: 20px; 
+}

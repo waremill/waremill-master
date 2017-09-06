@@ -1,0 +1,86 @@
+.article-page{
+	.content-wrapper {
+		.content {
+			.button, button {
+				min-width: 218px;
+				margin-bottom: 20px;
+			}
+			img {
+				&.alignleft {
+					margin-right: 50px;
+					margin-bottom: 50px;
+				}
+			}
+
+			blockquote {
+				max-width: 700px;
+				margin: 0 auto;
+				position: relative;
+				border: 0;
+				p {
+					font-size: 1.6rem;
+					line-height: 26px;
+					color: $font--color1;
+					font-weight: 300;
+					font-style: normal;
+				}
+				&:before {
+					content: "\f10d";
+					font-size: 1.3rem;
+					color: #808080;
+					position: absolute;
+					left: -35px;
+					top: 0;
+					font-family: "FontAwesome";
+				}
+				&:after {
+					content: "\f10e";
+					font-size: 1.3rem;
+					color: #808080;
+					position: absolute;
+					right: -35px;
+					bottom: 0;
+					font-family: "FontAwesome";
+				}
+			}
+
+			ul, ol {
+				margin-bottom: 30px;
+				li {
+					font-size: 1.6rem;
+					line-height: normal;
+					margin: 10px 0px;
+					position: relative;
+					padding-left: 26px;
+					&:before {
+						content: "\f105";
+						font-size: 1.3rem;
+						color: #808080;
+						position: absolute;
+						left: 0;
+						top: 3px;
+						font-family: "FontAwesome";
+					}
+				}
+				ul, ol {
+					margin-left: 30px;
+				}
+			}
+
+			ol {
+				list-style-type: decimal;
+				counter-reset: item;
+				li{
+					display: block;
+					padding-left: 0;
+					&:before {
+						content: counters(item, ".") " ";
+						counter-increment: item;
+						position: static;
+						font-family: $main-font;
+					}
+				}
+			}
+		}
+	}
+}

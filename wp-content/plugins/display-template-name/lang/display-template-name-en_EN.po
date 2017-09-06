@@ -1,0 +1,74 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: display-template-name\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2013-01-03 14:05+0100\n"
+"PO-Revision-Date: 2013-01-03 14:05+0100\n"
+"Last-Translator: Chap <nanao@yopmail.com>\n"
+"Language-Team: Aurelien Chappard <aucha@deefuse.fr>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-Language: French\n"
+"X-Poedit-Country: FRANCE\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-SearchPath-0: /Users/aurelienchappard/Documents/Laboratoires/wordpress plugins/display-template-name/trunk\n"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:58
+msgid "The position have been saved."
+msgstr "The position have been saved."
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:77
+msgid "Select the position of the debug box."
+msgstr "Select the position of the debug box in your website :"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:86
+msgid "Top left"
+msgstr "Top left"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:95
+msgid "Top right"
+msgstr "Top right"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:104
+msgid "Bottom left"
+msgstr "Bottom left"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:113
+msgid "Bottom right"
+msgstr "Bottom right"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:118
+msgid "If the toolbar is displayed when you visit the site, the template name will be displayed in it and the above parameter will not be considered."
+msgstr "If the toolbar is displayed when you visit the site, the template name will be displayed in it and the above parameter will not be considered."
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:121
+msgid "Update Settings"
+msgstr "Update Settings"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:189
+#: plugins/display-template-name/trunk/display-template-name.php:247
+msgid "Current template:"
+msgstr "Current template:"
+
+#: /Users/aurelienchappard/Documents/Laboratoires/wordpress
+#: plugins/display-template-name/trunk/display-template-name.php:234
+msgid "Settings"
+msgstr "Settings"
+
+#~ msgid "String name"
+#~ msgstr "Nom de la chaine"
+
+#~ msgid "Other String"
+#~ msgstr "Autre chaine"

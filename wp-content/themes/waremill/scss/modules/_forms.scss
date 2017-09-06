@@ -1,0 +1,400 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="url"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="week"],
+input[type="month"],
+textarea,
+select{
+	font-size: 1.4rem;
+	font-family: $main-font;
+	border-style: none;
+	border: 1px solid $border--color2;
+	color: $font--color5;
+	width: 100%;
+	line-height: 40px;
+	height: 40px;
+	padding: 0 10px;
+	margin-bottom: 0;
+	vertical-align: middle;
+	outline: 0;
+	@include bxz;
+	@include round(3px);
+	box-shadow: none;	
+	appearance:none;
+	background: #fff;
+	&:hover, &:focus{
+		border-color: $brand--color1;
+		background: white;
+	}	
+}
+input[disabled]{
+	background: darken($grey--background,10%);
+	&:hover, &:focus{
+		border-color: $border--color1;
+		background: darken($grey--background,10%);
+	}
+}
+button[type="submit"],
+input[type="submit"]{
+	font-size: 1.3rem;
+	min-width: 100px;
+	font-weight: 700;
+	letter-spacing: normal;
+	border-style: none;
+	background: $brand--color1;
+	color: white;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	cursor:pointer;
+	padding: 0 10px;
+	text-align: center;
+	@include round(3px);
+	@include transition(all, 0.3s);	
+	text-transform: uppercase;
+	outline: none;
+	margin-top: 0;
+	height: 40px;
+	color: #fff;
+	line-height: 40px;
+	margin-bottom: 0;
+	i{
+		margin-left: $xs;
+		@include transition(all, 0.3s);
+	}
+	width: 100%;
+	
+}
+
+select{
+	height: auto;
+	line-height: normal;
+	@include vpadding(8px,8px);
+	outline: none;	
+}
+
+textarea{
+	min-height: 120px;
+	line-height: 24px;
+	font-size: 1.6rem;
+	padding: 10px 15px;
+	margin-bottom: 0;
+	@include round(3px);
+	background: #fff;
+	border: 1px solid $border--color2;
+}
+[type="checkbox"]:not(:checked), 
+[type="checkbox"]:checked, 
+[type="radio"]:not(:checked),
+[type="radio"]:checked {
+	  position: absolute;
+	  left: -9999px;
+	}
+
+[type="checkbox"]:not(:checked) + label,
+[type="checkbox"]:checked + label,
+[type="radio"]:not(:checked) + label,
+[type="radio"]:checked + label {
+	position: relative;
+	padding-left: 25px;
+	cursor: pointer;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before  {
+	content: '';
+	position: absolute;
+	left:0; 
+	top: 8px;
+	width: 16px; 
+	height: 16px;
+	border: 1px solid $border--color2;
+	background: white;
+}
+[type="checkbox"]:not(:checked) + label:before,
+[type="checkbox"]:checked + label:before{
+	@include round(3px);
+}
+[type="radio"]:not(:checked) + label:before,
+[type="radio"]:checked + label:before {
+	@include round(50%);
+}
+
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after {
+	content: '';
+	position: absolute;
+	top: 12px; 
+	left:4px;
+	line-height: 0.8;
+	transition: all .2s;
+	background: $brand--color1;
+	width: 8px;
+	height: 8px;
+}
+[type="checkbox"]:not(:checked) + label:after,
+[type="checkbox"]:checked + label:after{
+	@include round(2px);
+}
+[type="radio"]:not(:checked) + label:after,
+[type="radio"]:checked + label:after{
+	@include round(50%);
+}
+/* checked mark aspect changes */
+[type="checkbox"]:not(:checked) + label:after,
+[type="radio"]:not(:checked) + label:after {
+	opacity: 0;
+	transform: scale(0);
+}
+[type="checkbox"]:checked + label:after,
+[type="radio"]:checked + label:after {
+	opacity: 1;
+	transform: scale(1);
+}	
+.input-block {
+	margin-bottom: 35px;
+	label {
+		display: block;
+		font-size: 1.6rem;
+		margin-bottom: 9px;
+		span {
+			color: #ed1c24;
+		}
+	}
+
+}
+
+[data-tip] {
+	position:relative;
+
+}
+[data-tip]:before {
+	content:'';
+	/* hides the tooltip when not hovered */
+	display:none;
+	content:'';
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid $font--color1;
+	position:absolute;
+	z-index:8;
+	font-size:0;
+	line-height:0;
+	width:0;
+	height:0;
+	position:absolute;
+	bottom: -6px;
+	left:35px;
+	z-index:8;
+	font-size:0;
+	line-height:0;
+	width:0;
+	height:0;
+}
+[data-tip]:after {
+	display:none;
+	content:attr(data-tip);
+	position:absolute;
+	bottom: -34px;
+    left: 0px;
+    padding: 5px 8px;
+    background: $font--color1;
+    color: #fff;
+    z-index: 9;
+    font-size: 1.2rem;
+    font-weight: 700;
+    height: 28px;
+    line-height: 18px;
+    border-radius: 3px;
+    white-space: nowrap;
+    word-wrap: normal;
+}
+[data-tip]:hover:before,
+[data-tip]:hover:after {
+	display:block;
+}
+
+.checkbox-input {
+	font-size: 1.5rem;
+	color: $font--color2;
+	cursor: pointer;
+	.checkbox {
+		width: 17px;
+	    height: 17px;
+	    padding: 0 5px 0 0;
+	    background: url(img/checkbox.png) no-repeat;
+	    display: block;
+	    clear: left;
+	    float: left;
+	    margin-right: 14px;
+	}
+	input, label {
+		cursor: pointer;
+		b {
+			font-weight: 700;
+		}
+	}
+	label {
+		line-height: 18px;
+	}
+}
+
+.radio-input {
+	font-size: 1.5rem;
+	color: $font--color2;
+	cursor: pointer;
+	.radio {
+		width: 17px;
+	    height: 17px;
+	    padding: 0 5px 0 0;
+	    background: url(img/radio.png) no-repeat;
+	    display: block;
+	    clear: left;
+	    float: left;
+	    margin-right: 10px;
+	}
+	input, label {
+		cursor: pointer;
+		b {
+			font-weight: 700;
+		}
+	}
+	label {
+		line-height: 18px;
+	}
+}
+
+.select-block {
+	position: relative;
+	height: 40px;
+	select.styled {
+	    width: 100% !important;
+	    height: 100% !important;
+	}
+	.SumoSelect {
+		width: 100%;
+		p.SelectBox {
+			font-weight: 400;
+			padding-left: 35px;
+			label {
+				i {
+					background: #fff url(img/orange-select-arrow.png) left 3px no-repeat;
+				}
+			}
+		}
+
+		.SelectBox {
+			padding: 6px 8px;
+		}
+	}
+	.select {
+	  position: absolute;
+	  width: 100%;
+	  height: 40px;
+	  padding: 10px 24px 0 15px;
+	  font-family: $main-font;
+	  font-size: 1.6rem;
+	  font-weight: 400;
+	  color: $font--color11;
+	  border: 1px solid $border--color2;
+	  @include round(3px);
+	  background: #fff url(img/orange-select-arrow.png) right 18px no-repeat;
+	  overflow: hidden;
+	}
+
+	.SumoSelect > .CaptionCont {
+		border: 1px solid $border--color1;
+	}
+}
+
+
+
+::-webkit-input-placeholder {
+   color: $font--color11;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+   color: $font--color11; 
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+   color: $font--color11;
+}
+
+:-ms-input-placeholder {  
+   color: $font--color11; 
+}
+
+
+.file-btn-holder{
+	overflow: hidden;
+	.button {
+		height: 30px;
+		line-height: 30px;
+		background: #666666;
+		color: #fff !important;
+		span {
+			color: #fff;
+		}
+		width: 106px !important;
+		display: inline-block;
+		float: left;
+		margin-top: 0 !important;
+		margin-right: 23px;
+		text-transform: none !important;
+		font-size: 1.4rem;
+		font-weight: 300;
+		i {
+			margin-top: 8px !important;
+		}
+	}
+	#uploadFile {
+		background: none;
+		border: 0;
+		outline: 0;
+		display: inline-block;
+		float: left;
+		width: 150px;
+		height: 30px;
+		line-height: 30px;
+		text-align: left;
+		color: $font--color5;
+	}
+	.fileUpload {
+	    position: relative;
+	    overflow: hidden;
+	}
+	.fileUpload input.upload {
+	    position: absolute;
+	    top: 0;
+	    right: 0;
+	    margin: 0;
+	    padding: 0;
+	    font-size: 20px;
+	    cursor: pointer;
+	    opacity: 0;
+	    filter: alpha(opacity=0);
+	    width: 100% !important;
+	    height: 100%;
+	    z-index: 10;
+	}
+}
+
+.checkbox-input {
+	input {
+		margin-right: 15px;
+		position: static !important;
+	}
+	font-size: 1.6rem;
+}

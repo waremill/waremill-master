@@ -1,0 +1,128 @@
+.container{
+  width: $container;
+  margin: 0 auto;
+  position: relative;
+  @include clear;
+}
+
+
+.cell{
+  width: $container;
+  float: left;
+  position: relative;
+  padding: 0 15px;
+  &.parent{
+  padding: 0;
+  }
+}
+
+.row {
+  margin-left: -15px;
+  margin-right: -15px;
+  overflow: hidden;
+
+  &.small-gutter {
+    margin-left: -5px;
+    margin-right: -5px;
+    .cell {
+      padding: 0 5px;
+    }
+  }
+  &.visible {
+    overflow: visible;
+    /* display: inline-block;
+    width: 100%; */
+    &:after, &:before {
+      content: "";
+      display: table;
+    }
+    &:after {
+      clear: both;
+    }
+    clear: both;
+    zoom: 1;
+  }
+}
+
+
+
+.x1 {
+  width: $container/12;
+}
+
+.x2{
+  width: $container/12*2;
+}
+
+.x2-4{
+  width: $container/12*2.4;
+}
+
+.x3{
+  width: $container/12*3;
+}
+
+.x4{
+  width: $container/12*4;
+}
+
+.x5{
+  width: $container/12*5;
+}
+
+.x6{
+  width: $container/12*6;
+}
+
+.x7{
+  width: $container/12*7;
+}
+
+.x8{
+  width: $container/12*8;
+}
+
+.x9{
+  width: $container/12*9;
+}
+
+.x10{
+  width: $container/12*10;
+}
+
+.x11{
+  width: $container/12*11;
+}
+.by2 {
+	width:$container/2;
+}
+.by3 {
+	width:$container/3;
+}
+.by4 {
+	width:$container/4;
+}
+.by5 {
+  width:$container/5;
+} 
+.by6 {
+  width:$container/6;
+}
+.by7 {
+  width:$container/7;
+}
+.by8 {
+  width:$container/8;
+}
+.by9 {
+  width:$container/9;
+}
+.by10 {
+  width:$container/10;
+}
+.by11 {
+  width:$container/11;
+}
+.by12 {
+  width:$container/12;
+}

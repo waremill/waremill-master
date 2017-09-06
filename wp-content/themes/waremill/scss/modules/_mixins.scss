@@ -1,0 +1,190 @@
+@mixin vpadding($top, $bottom) {
+	padding-top: $top; 
+	padding-bottom: $bottom;
+}
+@mixin hpadding($left, $right) {
+	padding-left: $left; 
+	padding-right: $right;
+}
+@mixin vmargin($top, $bottom) {
+	margin-top: $top; 
+	margin-bottom: $bottom;
+}
+@mixin hmargin($top, $bottom) {
+	margin-left: $top; 
+	margin-right: $bottom;
+}
+@mixin vborder($top, $bottom) {
+	border-top: $top; 
+	border-bottom: $bottom;
+}
+@mixin round($value){
+	-webkit-border-radius: $value;
+	-moz-border-radius: $value;
+	border-radius: $value;
+}
+@mixin image-auto{
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+	display: inline-block;
+}
+@mixin bxz{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+@mixin transition($type, $value){
+	transition: $type $value;
+	-moz-transition: $type $value;
+	-webkit-transition: $type $value;
+	-o-transition: $type $value;
+	-webkit-transition-timing-function: ease;
+}
+@mixin transition-a{
+	a{
+		position: relative;
+	}
+	a:before{
+		position: absolute;
+		top: 0;
+		content: '';
+		display: block;
+		width: 0;
+		background: transparent;
+		height: 1px;
+		@include transition(all,0.3s);
+	}
+	a:hover:before{
+		width: 100%;
+		background: $font--color1;
+	}
+	a:hover{
+		text-decoration: none;		
+	}
+}
+
+
+@mixin regular{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+}
+@mixin light{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+}
+@mixin semi-bold{
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 600;
+}
+
+
+@mixin opacity($opacity){
+	opacity: $opacity;
+	$opacity-ie: $opacity * 100;
+  // filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin overlay($opacity,$color){
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
+	background: rgba($color, $opacity);
+}
+
+@mixin shadow-none{
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+
+@mixin shadow-text{
+  text-shadow: 0.5px 0.866px 3px rgba(0, 0, 0, 0.4);
+}
+
+@mixin absolute($top, $right, $bottom, $left) {
+  position: absolute;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+@mixin clear{
+	&:before,
+	&:after{
+		content: "";
+		visibility: hidden;
+		height: 0;
+		display: table;
+ 	}
+	&:after{
+		clear: both;
+  	}
+}
+
+@mixin list_h($value){
+  @include clear;
+  li{
+	float: left;
+	margin-left: ($value);
+	&:first-child{
+	  margin: 0;
+	}
+  }
+}
+
+@mixin list_v($value){
+  li{
+	float: none;
+	margin-left: 0;
+	margin-top: ($value);
+	&:first-child{
+	  margin: 0;
+	}
+  }
+}
+
+@mixin rotate($value){
+  -ms-transform: rotate($value); /* IE 9 */
+  -moz-transform: rotate($value); /* Firefox */
+  -webkit-transform: rotate($value); /* Safari and Chrome */
+  -o-transform: rotate($value); /* Opera */
+}
+
+@mixin vertical-align($position: relative) {
+  position: $position;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+@mixin small-desktop{
+  @media (max-width: #{$small-desktop-width} ) {
+    @content;
+  }
+}
+
+@mixin tablet{
+  @media (max-width: #{$tablet-width}) {
+    @content;
+  }
+}
+
+@mixin mobile{
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+
+@mixin small-mobile{
+  @media (max-width: #{$small-mobile-width}) {
+    @content;
+  }
+}

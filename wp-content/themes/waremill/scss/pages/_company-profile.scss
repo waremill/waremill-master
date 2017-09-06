@@ -1,0 +1,250 @@
+.company-profile-page {
+
+	.x7 {
+		@include tablet {
+			width: 100%;
+		}
+	}
+
+	.x5 {
+		@include tablet {
+			width: 100%;
+		}
+	}
+
+	.white-box {
+		padding: 20px 30px;
+		margin: 3px;
+		margin-bottom: 15px;
+		@include mobile {
+			padding: 15px 20px;
+		}
+	}
+	h1 {
+		color: $brand--color1;
+	}
+	.products-listing {
+		margin-bottom: 30px;
+		.product-line {
+			padding: 30px 0;
+			border-top: 1px solid $border--color1;
+			border-bottom: 1px solid $border--color1;
+			position: relative;
+			&:before {
+				content: "";
+				width: 50px;
+				position: absolute;
+				top: 0;
+				height: 2px;
+				left: 0;
+				background: $border--color1;
+				z-index: 10;
+			}
+			&:after {
+				content: "";
+				width: 50px;
+				position: absolute;
+				bottom: 0;
+				height: 2px;
+				left: 0;
+				background: $border--color1;
+				z-index: 10;
+			}
+			.text-content {
+				width: calc(100% - 150px);
+				@include small-mobile {
+					width: 100%;
+				}
+				p {
+					margin-bottom: 0;
+					line-height: 24px;
+					@include mobile {
+						font-size: 1.6rem;
+					}
+				}
+			}
+		}
+	}
+
+	h2 {
+		margin-bottom: 30px;
+		color: $font--color5;
+	}
+
+	.company-details-wrapper {
+		.row {
+			margin-bottom: 15px;
+			font-size: 1.4rem;
+		}
+	}
+
+	.row {
+		.x6 {
+			@include small-desktop {
+				width: 100%;
+			}
+		}
+		.x3,.x4,.x9.x8 {
+			@include mobile {
+				width: 100%;
+				margin-bottom: 5px;
+			}
+		}
+	}
+
+	.company-contact-details {
+		.row {
+			margin-bottom: 0px;
+			font-size: 1.4rem;
+			.cell {
+				position: relative;
+				padding-top: 5px;
+				padding-bottom: 5px;
+			}
+		}
+		.icon {
+			display: inline-block;
+			width: 27px;
+			height: 27px;
+			border: 1px solid $brand--color1;
+			text-align: center;
+			line-height: 25px;
+			font-size: 1.3rem;
+			color: $brand--color1;
+			margin-right: 8px;
+			margin-top: -2px;
+			@include round(14px);
+			@include small-desktop {
+				margin-right: 5px;
+			}
+		}
+	}
+
+	.company-map {
+		iframe {
+			width: 100% !important;
+		}
+	}
+
+	.filter-box {
+		.filter-header {
+			h4 {
+				font-size: 2.1rem;
+			}
+		}
+	}
+
+	.portofolio-carousel-wrapper {
+		position: relative;
+		.portofolio-carousel-item {
+			overflow: hidden;
+			margin-left: -5px;
+			margin-right: -5px;
+			position: relative;
+			/* border: 1px solid $border--color1; */
+			.image {
+				width: 33.33%;
+				height: 200px;
+				display: inline-block;
+				float: left;
+				padding: 5px;
+				@include tablet {
+					width: 100px;
+					height: 100px;
+				}
+				@include small-mobile {
+					width: 100%;
+					height: 200px;
+					margin-bottom: 10px;
+				}
+				a {
+					background-repeat: no-repeat;
+					background-position: center center;
+					background-size: cover;
+					display: inline-block;
+					width: 100%;
+					height: 100%;
+
+				}
+			}
+			.text-content {
+				width: 100%;
+				display: inline-block;
+				position: absolute;
+				bottom: 5px;
+				left: 0;
+				z-index: 10;
+				padding: 10px 20px;
+				background: rgba($brand--color1, .9);
+				@include tablet {
+					
+				}
+				@include small-mobile {
+					
+				}
+				p {
+					margin-bottom: 0;
+					font-size: 1.6rem;
+					line-height: 24px;
+					color: #fff;
+					text-align: center;
+					font-weight: 400;
+				}
+			}
+		}
+
+		.owl-nav {
+			div {
+				position: absolute;
+				z-index: 999;
+				top: 50%;
+				margin-top: -4px;
+				font-size: 1.4rem;
+				&.owl-prev {
+					left: -18px;
+				}
+				&.owl-next {
+					right: -18px;
+				}
+			}
+		}
+	}
+
+	.ratings-wrapper {
+		.rating-item {
+			border: 1px solid $border--color1;
+			@include round(3px);
+			padding: 20px 30px;
+			position: relative;
+			margin-bottom: 15px;
+			h5 {
+				margin-bottom: 10px;
+			}
+			p {
+				margin-bottom: 0;
+				font-size: 1.4rem;
+				line-height: 24px;
+				font-weight: 400;
+			}
+			.rating-block {
+				position: absolute;
+				right: 30px;
+				top: 18px;
+				z-index: 10;
+				overflow: hidden;
+				i {
+					display: inline-block;
+					float: left;
+					magin-left: 5px;
+					display: inline-block;
+					font-size: 1.4rem;
+					color: $border--color1;
+					&.full {
+						color: $brand--color1;
+					}
+				}
+			}
+		}
+	}
+	
+}

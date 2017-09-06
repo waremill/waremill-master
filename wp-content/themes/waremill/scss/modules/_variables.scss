@@ -1,0 +1,54 @@
+// grid
+
+$container: 100%;
+
+// colors
+
+$brand--color1: #ff7800; // orange
+$brand--color2: #2cade2; // blue
+$green-color: #9ac546;
+
+$font--color1: #585858; // heading
+$font--color11: #18393f; // heading special
+$font--color2: #585858; // paragraphs
+$font--color3: #585858; // paragraphs lighter
+$font--color4: #333333; //heading ttu
+$font--color5: #808080; //heading ttu
+
+
+.contractor-theme {
+	$brand--color1: #3cb7ea;
+}
+
+
+/////GREYS
+$border--color1: #e5e5e5;
+$border--color2: #cccccc;
+$grey--background: #f9f9f9;
+
+$xxl: 120px;
+$xl: 70px;
+$lm: 50px;
+$l: 30px;
+$ml: 25px;
+$m: 20px;
+$xm: 15px;
+$s: 10px;
+$xs: 5px;
+
+
+// media queries
+$m-d: 1200px;
+$m-dm: 1024px;
+$m-tl: 960px;
+$m-tp: 767px;
+$m-ti: 700px;
+$m-pl: 640px;
+$m-pp: 480px;
+
+$main-font: "Lato";
+
+$small-desktop-width: 1240px;
+$tablet-width: 1020px;
+$mobile-width: 767px;
+$small-mobile-width: 480px;

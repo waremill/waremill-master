@@ -1,0 +1,327 @@
+.homepage {
+	.homepage-banner {
+		height: 755px;
+		background-position: center center;
+		background-size: cover;
+		background-repeat: none;
+		position: relative;
+		@include mobile {
+			height: auto;
+			padding-top: 100px;
+			padding-bottom: 40px;
+		}
+		&:before {
+			content: "";
+			height: 146px;
+			position: absolute;
+			left: 0;
+			width: 100%;
+			top: 0;
+			z-index: 2;
+			background: url(img/repeater-overlay.png) repeat-x;
+		}
+		.container {
+			height: 100%;
+			.inner-content {
+				@include vertical-align;
+				text-align: center;
+				@include mobile {
+					transform: none;
+					top: auto;
+					position: static;
+				}
+				h1 {
+					text-shadow: 1.5px 2.598px 10px rgba(0, 0, 0, 0.4);
+					font-size: 4rem;
+					color: #fff;
+					display: block;
+					font-weight: 300;
+					max-width: 900px;
+					margin: 0 auto 30px;
+					b, strong {
+						font-weight: 700;
+					}
+					@include mobile {
+						font-size: 3.6rem;
+					}
+
+					@include small-mobile {
+						font-size: 3rem;
+					}
+				}
+				h2 {
+					font-size: 2.8rem;
+					margin-bottom: 35px;
+					@include shadow-text;
+					color: #fff;
+					font-weight: 400;
+					@include mobile {
+						font-size: 2rem;
+					}
+				}
+				.search-bar {
+					margin-bottom: 25px;
+					max-width: 730px;
+					display: inline-block;
+					padding: 10px 10px;
+					background: rgba(0,0,0,.3);
+					@include round(3px);
+					width: 100%;
+					.input-block {
+						margin: 0;
+						display: inline-block;
+						float: left;
+						margin-right: 12px;
+						position: relative;
+						width: 210px;
+						@include mobile {
+							width: 100%;
+							margin-bottom: 5px;
+							margin-right: 0;
+						}
+						i {
+							position: absolute;
+							left: 14px;
+							top: 12px;
+							color: $brand--color1;
+							font-size: 1.4rem;
+							z-index: 10;
+						}
+						.select-block {
+							width: 100%;
+							text-align: left;
+							.select {
+								padding-left: 24px;
+    							text-align: center;
+								background: #fff url(img/select-arrow.png) right 18px no-repeat;
+							}
+							.SumoSelect > .optWrapper.multiple > .options li.opt span i, .SumoSelect .select-all > span i {
+								    top: 1px;
+							}
+							.SumoSelect > .optWrapper > .options li label {
+								margin: 5px 0;
+								font-size: 1.4rem;
+							}
+						}
+					}
+					.button {
+						width: 44px;
+						float: left;
+						display: inline-block;
+						min-width: 0;
+						@include mobile {
+							width: 100%;
+						}
+						i {
+							margin: 0;
+						}
+					}
+				}
+				.button-wrapper{
+					display: inline-block;
+					padding: 10px 10px;
+					background: rgba(0,0,0,.3);
+					@include round(3px);
+					.button {
+						min-width: 198px;
+					}
+				}
+			}
+		}
+	}
+
+	h3 {
+		font-size: 3.2rem;
+		margin-bottom: 47px;
+	}
+
+	.categories-listing  {
+		margin-bottom: 47px;
+		.x3 {
+			@include mobile {
+				width: 50%;
+				margin-bottom: 10px;
+			}
+
+			@include small-mobile {
+				width: 100%;
+			}
+		}
+	}
+
+	.forum-section {		
+		background-position: center center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		position: relative;
+		height: 450px;
+		margin-bottom: 47px;
+		.overlay {
+			@include overlay(0.4,#000);
+		}
+		.inner-content {
+			@include vertical-align;
+			text-align: center;
+			max-width: 750px;
+			margin: 0 auto;
+			z-index: 10;
+			h4 {
+				color: #fff;
+				@include shadow-text;
+				font-size: 3.2rem;
+				font-weight: 400;
+				margin-bottom: 27px;
+			}
+			div.dec {
+				display: inline-block;
+				width: 60px;
+				height: 1px;
+				background: #fff;
+				margin-bottom: 35px;
+			}
+			p {
+				font-size: 1.8rem;
+				line-height: 28px;
+				color: #fff;
+				font-weight: 400;
+				margin-bottom: 40px;
+			}
+			.button {
+				min-width: 178px;
+			}
+		}
+	}
+
+	.white-box {
+		margin-bottom: 60px;
+		@include mobile {
+			margin-bottom: 0;
+		}
+	}
+
+	.how-it-works-section {
+		background: #f9f9f9;
+	}
+
+	.products-types {
+		text-align: center;
+		.x2-4 {
+			@include tablet {
+				width: 33.33%;
+			}
+
+			@include small-mobile {
+				width: 100%;
+			}
+		}
+		.cell {
+			@include tablet {
+				float: none;
+				display: inline-block;
+			}
+		}
+		.product-type {
+			text-align: center;
+			margin-bottom: 30px;
+			img {
+				clear: both;
+			}
+			.icon {
+				min-height: 120px;
+				text-align: center;
+				@include small-mobile {
+					min-height: 0;
+				}
+				img {
+					max-height: 120px;
+
+				}
+			}
+			.sep {
+				width: 66px;
+				height: 4px;
+				background: #e2e2e2;
+				display: block;
+				margin: 40px auto 30px;
+				@include mobile {
+					margin: 15px auto 20px;
+				}
+			}
+			h4 {
+				text-transform: uppercase;
+				font-size: 1.8rem;
+				font-weight: 400;
+				margin-bottom: 5px;
+				min-height: 44px;
+
+			}
+			p {
+				font-size: 1.8rem;
+				line-height: 24px;
+			}
+		}
+	}
+
+	.grey-section {
+		.button {
+			margin-top: 30px;
+		}
+
+		.x3 {
+			@include mobile {
+				width: 50%;
+				margin-bottom: 30px;
+			}
+			@include small-mobile {
+				width: 100%;
+			}
+		}
+	}
+
+	.white-section {
+		min-height: 600px;
+		position: relative;
+		@include tablet {
+			min-height: 400px;
+			text-align: center;
+		}
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 1;
+			background: #fff;
+			opacity: .8;
+			display: none;
+			@include tablet {
+				display: block;
+			}
+		}
+		.container {
+			z-index: 2;
+		}
+		.x3 {
+			@include mobile {
+				width: 50%;
+				margin-bottom: 30px;
+			}
+		}
+		.limited-content {
+			max-width: 440px;
+			display: inline-block;
+			h3 {
+				margin-bottom: 60px;
+				@include tablet {
+					margin-bottom: 30px;
+				}
+			}
+			p {
+				font-size: 1.8rem;
+				line-height: 24px;
+				margin-bottom: 40px;
+			}
+		}
+	}
+}
